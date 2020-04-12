@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>搜索</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/upload.css">
+    <script type="text/javascript">
+      //图片上传预览，非IE则用了HTML5的代码，IE是用了滤镜
+      function previewImage(file, MAXWIDTH, MAXHEIGHT){//MAXWIDTH、MAXHEIGHT与放预览图片的DIV——preview的大小相呼应
+        var div = document.getElementById('preview');
+        if (file.files && file.files[0]) {//HTML5部分
+          div.innerHTML = "<img id='imghead'></img>";
+          var img = document.getElementById('imghead');
+          img.onload = function(){
+            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+            img.width = rect.width;
+            img.height = rect.height;
+            img.style.marginTop = rect.top + 'px';
+          }
+          var reader = new FileReader();
+          reader.onload = function(evt){
+            img.src = evt.target.result;
+          }
+          reader.readAsDataURL(file.files[0]);
+        }
+        else //兼容IE
+        {
+          var sFilter = 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+          file.select();
+          var src = document.selection.createRange().text;
+          div.innerHTML = "<img id='imghead'></img>";
+          var img = document.getElementById('imghead');
+          img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+          var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+          div.innerHTML = "<div style='width:" + rect.width + "px;height:" + rect.height + "px;margin-top:" + rect.top + "px;" + sFilter + src + "\"'></div>";
+        }
+      }
+      //用于计算预览图片的大小
+      function clacImgZoomParam(maxWidth, maxHeight, width, height){
+        var param = {
+          top: 0,
+          left: 0,
+          width: width,
+          height: height
+        };
+        if (width > maxWidth || height > maxHeight) {
+          rateWidth = width / maxWidth;
+          rateHeight = height / maxHeight;
+          if (rateWidth > rateHeight) {
+            param.width = maxWidth;
+            param.height = Math.round(height / rateWidth);
+          }
+          else {
+            param.width = Math.round(width / rateHeight);
+            param.height = maxHeight;
+          }
+        }
+        param.left = Math.round((maxWidth - param.width) / 2);
+        param.top = Math.round((maxHeight - param.height) / 2);
+        return param;
+      }
+    </script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul id="outer">
+            <li class="pic"><a href="home.html"><img src="../image/%1C%1C%1C%1C头像.jpeg" alt="头像" width="30" height="30"></a></li>
+            <li class="leftside"><a href="home.html"><p>首页</p></a></li>
+            <li class="leftside"><a href="browser.html"><p>浏览页</p></a></li>
+            <li class="leftside"><a href="search.html"><p>搜索页</p></a></li>
+            <li class="rightside">
+                <div>
+                    <p id="personalCenter">个人中心</p>
+                    <ul id = "personalList">
+                        <li class="hidden"><img src="../image/WechatIMG247.jpeg" width="20" height="20"><a href="upload.html">上传</a></li>
+                        <li class="hidden"><img src="../image/WechatIMG249.jpeg" width="20" height="20"><a href="mypics.html">我的照片</a></li>
+                        <li class="hidden"><img src="../image/WechatIMG248.jpeg" width="20" height="20"><a href="myfavourite.html">我的收藏</a></li>
+                        <li class="hidden"><img src="../image/WechatIMG227.jpeg" width="20" height="20"><a href="../index.html">登入</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <p class="headline">Upload</p>
+    <div id="preview" style="width:320px;height:240px;"></div><!--用来放预览图片的DIV-->
+    <input type="file" onchange="previewImage(this,320,240)" accept="image/*" />
+    <p>
+        图片标题:
+        <input type="text"/>
+    </p>
+    <p class="describe">
+        图片描述:
+        <input type="text"/>
+    </p>
+    <p>
+        拍摄国家:
+        <input type="text"/>
+    </p>
+    <p>
+        拍摄城市:
+        <input type="text">
+    </p>
+    <div>
+    <a href="mypics.html">
+    <input type="button" onclick="alert('嘤嘤嘤 还不会哦')" value="上传" >
+    </a>
+    </div>
+</div>
+
+
+<footer>
+    <p>湖人总冠军!</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+.main{
+    border: 1px solid cyan;
+    margin: 10px;
+    border-radius: 8px 8px 8px 8px;
+}
+.title{
+    background-color: #a1fadd;
+    line-height: 25px;
+    color: mintcream;
+    font: 14pt normal;
+    font-family: Chalkduster sans-serif ;
+    border-radius: 5px 5px 0 0;
+    padding-left: 10px;
+}
+.demonstrateBar img{
+    width: 300px;
+    height: auto;
+    alignment: center;
+    margin-left: 25%;
+}
+h3{
+    padding: 10px 10px 10px 20px;
+    font-family:Chalkduster, serif;
+    font-size:18pt;
+    color: rgba(32,241,239,0.98);
+}
+.describe p{
+    font-family: Chalkduster ,serif;
+    font-size: 12pt;
+    padding: 10px;
+    color: rgba(32,241,239,0.98);
+}
+.demonstrateBar input{
+    margin: 5px 0px 20px 20px;
+    width: 150px;
+    height: 20px;
+    color: #91a4fa;
+    background-color: mintcream;
+    border: cyan 2px solid;
+    border-radius: 5px 5px 5px 5px;
+}
+.pageNumber{
+    text-align: center;
+    color: #a1fadd;
+
+}

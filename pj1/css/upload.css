@@ -1,0 +1,44 @@
+.main{
+    border-radius: 8px 8px 5px 5px;
+    border: 1px solid #a1fadd;
+    margin: 40px;
+    overflow: auto;
+}
+input[type="file"]{
+    color: white;
+    margin-left: 40%;
+    font-size: 14pt;
+}
+.headline{
+    border-radius: 5px 5px 0 0;
+    background-color: #96d2ca;
+    border-bottom: 1px solid #a1fadd;
+    line-height: 30px;
+}
+.main p{
+    color: white;
+    padding: 10px;
+}
+p input{
+    border-radius: 5px 5px 5px 5px;
+    border: 3px solid skyblue;
+    display: block;
+    width: 90%;
+    alignment: center;
+    margin-left: 5%;
+}
+.describe input{
+    width: 90%;
+    alignment: center;
+    height: 50px;
+}
+a input[type="button"]{
+    margin: 15px 30%;
+    color: #91a4fa;
+    height: 2%;
+    width: 100px;
+
+}
+a{
+    alignment: center;
+}

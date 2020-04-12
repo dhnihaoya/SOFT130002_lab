@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/header&footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/broswer.css">
+</head>
+
+<header>
+    <nav>
+        <ul id="outer">
+            <li class="pic"><a href="home.html"><img src="../image/%1C%1C%1C%1C头像.jpeg" alt="头像" width="30" height="30"></a></li>
+            <li class="leftside"><a href="home.html"><p>首页</p></a></li>
+            <li class="leftside chosen"><a href="browser.html"><p>浏览页</p></a></li>
+            <li class="leftside"><a href="search.html"><p>搜索页</p></a></li>
+            <li class="rightside">
+                <div>
+                <p id="personalCenter">个人中心</p>
+                <ul id = "personalList">
+                    <li class="hidden"><img src="../image/WechatIMG247.jpeg" width="20" height="20"><a href="../src/upload.html">上传</a></li>
+                    <li class="hidden"><img src="../image/WechatIMG249.jpeg" width="20" height="20"><a href="../src/mypics.html">我的照片</a></li>
+                    <li class="hidden"><img src="../image/WechatIMG248.jpeg" width="20" height="20"><a href="../src/myfavourite.html">我的收藏</a></li>
+                    <li class="hidden"><img src="../image/WechatIMG227.jpeg" width="20" height="20"><a href="../index.html">登入</a></li>
+                </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+<div class="sidebar">
+    <div class="search">
+        <p>搜索</p>
+        <input type="text" placeholder="  " name="" value="">
+        <input type="button" onclick="alert('不会 嘤嘤嘤！')" id="button" value="搜索">
+    </div>
+    <div class="leftBar" onclick="alert('在？借我五十')">
+        <ul>
+            <p class="header">热门国家快速浏览</p>
+            <li>中国</li>
+            <li>日本</li>
+            <li>美国</li>
+            <li>阿鲁巴</li>
+        </ul>
+    </div>
+    <div class="leftBar" onclick="alert('在？借我五十')" >
+        <ul>
+            <p class="header">热门城市快速浏览</p>
+            <li>上海</li>
+            <li>北京</li>
+            <li>东京</li>
+            <li>洛杉矶</li>
+        </ul>
+    </div>
+</div>
+<div class = "picCenter">
+<table>
+    <p>筛选</p>
+  <tr>
+    <!--二级联动，取自csdn-->
+    <div class="selectBar">
+        <select>
+            <option>内容</option>
+            <option>张三</option>
+            <option>风景</option>
+            <option>建筑</option>
+        </select>
+        <select id="oneDiv">
+            <option selected>请选择</option>
+            <option id="1">China</option>
+            <option id="2">Japan</option>
+            <option id="3">Italy</option>
+            <option id="4">America</option>
+        </select>
+        <select id="childSelect">
+            <option selected>请选择</option>
+        </select>
+    <script>
+            var Div = document.getElementById("oneDiv");
+            Div.onchange = function () {
+                var childLinkage = document.getElementById("childSelect");
+                childLinkage.innerHTML = ""; // 每次进来先清空城市列表
+                var divValue = this.value;
+                var cities = [];
+
+                switch (divValue) {
+                    case "请选择":
+                        cities = ['请选择']
+                        break;
+                    case "China":
+                        cities = ['ShangHai', 'KunMing']
+                        break;
+                    case "Japan":
+                        cities = ['Tokyo', 'Osaka', 'Kamakura']
+                        break;
+                    case "Italy":
+                        cities = ['Milan', 'Venice', 'Rome', 'Florance']
+                        break;
+                    case "America":
+                        cities = ['New York', 'San Francisco', 'Washington' ]
+                }
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement('option'); //先创建option
+                    var textNode = document.createTextNode(cities[i]); //再把城市名作为子节点填入，也可用innerHTML
+                    option.appendChild(textNode);
+                    childLinkage.appendChild(option);
+                }
+            }
+        </script>
+      <input id="filter" type="button" value="过滤搜索" onclick="alert('还在施工 东西不会嘤嘤嘤')">
+    </div>
+  </tr>
+  <tr>
+      <td>
+            <a href="picdetail.html"><img src="../image/travel-images/normal/small/222223.jpg"></a>
+      </td>
+      <td>
+            <a href="picdetail.html"><img src="../image/travel-images/normal/medium/222222.jpg"></a>
+      </td>
+      <td>
+            <a href="picdetail.html"><img src="../image/travel-images/normal/medium/5855221959.jpg"></a>
+      </td>
+      <td>
+            <a href="picdetail.html"><img src="../image/travel-images/normal/medium/5855213165.jpg"></a>
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <a href="picdetail.html"><img src="../image/travel-images/normal/medium/5855209453.jpg"></a>
+      </td>
+      <td>
+          <a href="picdetail.html"><img src="../image/travel-images/normal/medium/5855191275.jpg"></a>
+      </td>
+      <td>
+          <a href="picdetail.html"><img src="../image/travel-images/normal/medium/5856654945.jpg"></a>
+      </td>
+      <td>
+          <a href="picdetail.html"><img src="../image/travel-images/normal/medium/5855729828.jpg"></a>
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <a href="picdetail.html"><img src="../image/travel-images/normal/medium/5856697109.jpg"></a>
+      </td>
+      <td>
+          <a href="picdetail.html"><img src="../image/travel-images/normal/medium/5857398054.jpg"></a>
+      </td>
+      <td>
+          <a href="picdetail.html"><img src="../image/travel-images/normal/medium/6114881215.jpg"></a>
+      </td>
+      <td>
+          <a href="picdetail.html"><img src="../image/travel-images/normal/medium/6114960821.jpg"></a>
+      </td>
+  </tr>
+   <tr>
+       <td>
+           <a href="picdetail.html"><img src="../image/WechatIMG40414.jpeg" alt="picOfZhangThree" ></a>
+       </td>
+       <td>
+           <a href="picdetail.html"><img src="../image/WechatIMG40415.jpeg"></a>
+       </td>
+       <td>
+           <a href="picdetail.html"><img src="../image/WechatIMG40416.jpeg"></a>
+       </td>
+       <td>
+           <a href="picdetail.html"><img src="../image/WechatIMG40417.jpeg"></a>
+       </td>
+   </tr>
+</table>
+</div>
+
+<div class="pageNumber">
+<p onclick="alert('这个我还不会嘤嘤嘤')" class="pageNumber">《<span>1</span>  2 3 4 5 6 》</p>
+    </div>
+
+    </body>
+    <footer>
+        <div>
+        <p>嘎嘎嘎嘎嘎嘎嘎</p>
+    </div>
+</footer>
+</html>

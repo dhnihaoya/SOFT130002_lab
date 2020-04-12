@@ -1,0 +1,72 @@
+body{
+    background-color: #2c2c2c;
+}
+header{
+    background-color: #91a4fa;
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+    font-family: 微软雅黑 serif;
+    width: 100%;
+}
+footer{
+    height: 25px;
+    border-radius: 0 0 5px 5px;
+    background-color: #298081;
+    vertical-align: bottom;
+}
+footer p{
+    color: #b0e7fa;
+    border-radius: 0 0 5px 5px;
+}
+#outer{
+    display: inline;
+}
+
+.pic{
+    padding: 5px;
+    float: left;
+}
+
+.leftside a{
+    float: left;
+    color: white;
+    vertical-align: center;
+    padding: 10px;
+    border: 5px none;
+    margin: 2px;
+}
+
+.leftside :hover{
+    color: lightsteelblue;
+}
+.leftside.chosen a{
+    border-bottom: 6px solid #96d2ca ;
+    padding-bottom: 5px;
+}
+.rightside div{
+    float: right;
+    color: white;
+    width: 120px;
+}
+.rightside li a{
+    padding-top: 7px;
+    padding-bottom: 5px;
+    color: #b0e7fa;
+}
+#personalCenter{
+    vertical-align: center;
+    padding: 10px;
+}
+#personalList{
+    display: none;
+    width: 90px;
+    color: #96d2ca;
+    padding: 10px 20px 10px 10px;
+    vertical-align: center;
+    background-color:#91a4fa;
+}
+.rightside :hover #personalList{
+    display: block;
+    position: absolute;
+}

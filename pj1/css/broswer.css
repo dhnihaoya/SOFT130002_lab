@@ -1,0 +1,137 @@
+body{
+    box-sizing: border-box;
+}
+.sidebar{
+    float: left;
+    margin-left: 2%;
+    color: wheat;
+    width: 18%;
+    min-width: 80px;
+    max-width: 200px;
+    margin-right: 2% ;
+}
+
+.sidebar .search{
+    margin: 10px;
+    border: rgba(125,105,255,0.98) 1px solid;
+    border-radius: 8px 8px 5px 5px;
+    padding: 0;
+    width: 90%;
+    min-width: 80px;
+    max-width: 200px;
+}
+.sidebar p{
+    padding-top: 8px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    vertical-align: center;
+    color: white;
+    height: 20px;
+    background-color: #b0e7fa;
+    margin-right:0;
+}
+.search input, .search button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.search input{
+    margin-left: 5px;
+    border-radius: 5px 5px 5px 5px;
+    height: 25px;
+}
+.search #button{
+    border-radius: 3px 3px 3px 3px;
+    background-color: lightsteelblue;
+    color: mintcream;
+    height: 25px;
+    width: 40px;
+}
+.search #button:hover{
+    color: black;
+    background: darkgray;
+}
+.sidebar .leftBar{
+    margin: 10px;
+    padding: 0;
+    width: 90%;
+    min-width: 80px;
+    max-width: 200px;
+    border-radius: 8px 8px 0 0;
+}
+.leftBar li{
+    line-height: 20px;
+    color: rgba(158,252,255,0.98);
+    padding: 5px 10px 5px 10px;
+    vertical-align: center;
+    border-bottom: 1px solid rgba(125,105,255,0.98);
+    border-left: 1px solid rgba(125,105,255,0.98);
+    border-right : 1px solid rgba(125,105,255,0.98);
+}
+.leftBar ul li:hover{
+    color: lightsteelblue;
+    text-align: center;
+    padding-left: 10px;
+}
+.picCenter{
+    border: rgba(32,241,239,0.98) 1px solid;
+    border-radius: 8px 8px 5px 5px;
+    overflow: auto;
+    width: 76%;
+    margin-right: 20px;
+    margin-left: 2%;
+    max-width: 880px;
+}
+.picCenter p{
+    line-height: 30px;
+    height: 30px;
+    background-color: #a1fadd;
+    padding-left: 20px;
+    border-radius: 5px 5px 0 0;
+    color: white;
+}
+.selectBar{
+    text-align: left;
+    padding: 15px 20px 15px 20px;
+}
+.selectBar select{
+    width: 80px;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+    background-color: rgba(202,255,241,0.98);
+    color: white;
+}
+.selectBar input{
+    width: 80px;
+    height: 30px;
+    background-color: lightsteelblue;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    border:1px solid lightsteelblue;
+    margin-left: 5px;
+    line-height: 25px;
+}
+.selectBar input[id]:hover{
+    background-color: darkgray;
+}
+td{
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    padding: 10px;
+}
+td img{
+    padding: 18px;
+    width: 90%;
+    height: 90%;
+}
+.pageNumber p{
+    text-align: center;
+    color: lightsteelblue;
+    height: 30px;
+    padding: 5px;
+}
+
+

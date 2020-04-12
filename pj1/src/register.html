@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册张三看世界</title>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../css/register&login.css">
+</head>
+<body>
+    <div class="headPic">
+        <img src="../image/WechatIMG226.jpeg" width="150" height="150">
+        <p>注 册</p>
+    </div>
+    <div class="textFields">
+        <h2>注册</h2>
+        <form action="#" method="get">
+            <p>
+                用户名<br>
+                <input type="text" name="id" required="required" placeholder="eg：张三">
+            </p>
+
+            <p>
+                E-mail<br>
+                <input type="email" name="email" required="required" placeholder="你的邮箱" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]
+        +|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b
+        -\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x
+        3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c
+        \x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$">
+            </p>
+
+            <p>
+                设定密码<br>
+                <input type="password" name="password" required="required" >
+            </p>
+
+            <p>
+                请确认你的密码<br>
+                <input type="password" name="repassword" required="required">
+            </p>
+
+            <p>
+                <a href="../index.html">
+                    <input type="button" value="注册" onclick="window.location.href={% url 'login.html' %}">
+                </a>
+            </p>
+        </form>
+    </div>
+</body>
+<footer>
+    <p>嘿嘿嘿嘿嘿</p>
+</footer>
+</html>
