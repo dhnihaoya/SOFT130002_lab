@@ -6,44 +6,45 @@
     ];
 
     function display(number) {
-        var frame = document.createElement("div");//最大的框
+        var frame = document.createElement("div");//最外面的紫色框
         frame.className="item";
         var Genre = document.createElement("p");
         Genre.innerText = "Genre:" + works[number].tips;
-        Genre.style.padding = "0 0 10px 0";//调整与下面板块的间距
+        Genre.style.padding = "0 0 10px 0";
         frame.appendChild(Genre);
 
 
-        var nameBox = document.createElement("div");//框内的第一个框
+        var nameBox = document.createElement("div");
         nameBox.className = "inner-box";
         var Author = document.createElement("h3");
         Author.innerText = works[number].author;
-        Author.style.display = "inline";        //调整两个内容位于一行
-        Author.style.padding = "0 15px 0 0";     //调整两个内容的间距
+        Author.style.display = "inline";       
+        Author.style.padding = "0 15px 0 0"; 
+        //上面名字下面生卒 
         nameBox.appendChild(Author);
         var Lifetime = document.createElement("h4");
         Lifetime.innerText = "lifetime:" + works[number].lifetime;
-        Lifetime.style.display = "inline";      //调整两个内容位于一行
+        Lifetime.style.display = "inline";      //各种调整
         nameBox.appendChild(Lifetime);
         frame.appendChild(nameBox);
 
-        var photoBox = document.createElement("div");//框内的第二个框
+        var photoBox = document.createElement("div"); //带图的框
         photoBox.className = "inner-box";
         frame.appendChild(photoBox);
 
-        var PopularPhotos = document.createElement("h3"); //第二个框中的文字内容
+        var PopularPhotos = document.createElement("h3");  //第二个框里的字
         PopularPhotos.innerText="Popular Photos";
-        photoBox.appendChild(PopularPhotos);                         //加进第二个框
+        photoBox.appendChild(PopularPhotos);                         
 
         for(let j = 0 ;j < works[number].photos.length;j++){
-            var img = document.createElement("img");        //图片内容
+            var img = document.createElement("img");        //图
             img.src = works[number].photos[j];
             img.className = "photo";
-            photoBox.appendChild(img);                              //加进第二个框
+            photoBox.appendChild(img);                          //图加进去    
         }
 
-        var visit = document.createElement("button");//按钮
-        visit.textContent = "visit";                            //按钮内容
+        var visit = document.createElement("button");    //按钮
+        visit.textContent = "visit";                           
         frame.appendChild(visit);
 
         document.body.appendChild(frame);
