@@ -152,21 +152,19 @@ for (var i = 0, len = dots.length; i < len; i++){
 /********************************************begin************************************/
 
 $(document).ready(function() {
-    //设置td的点击事件
     $("td").click(function() {
         let td = $(this);
         let content = td.html();
-        //将td变成一个input进行输入
+       
         td.html("<input type = 'text' class = 'currentInput' >");
         let input = $('.currentInput');
         input.attr({"value": content});
-        //input聚焦
+       
         input.focus();
-        //将input的点击事件设置成false
         input.click(function() {
             return false;
         });
-        //失去焦点时将input变回文本
+       
         input.blur(function() {
             let newContent = input.val();
             td.html(newContent);
