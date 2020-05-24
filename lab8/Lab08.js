@@ -2,7 +2,13 @@
 /*请在该区域内声明或者获取所要使用的全局变量*/
 /********************************************begin************************************/
 
-/*Global Variable Area */
+var wrap = document.querySelector(".wrap");
+var next = document.querySelector(".arrow_right");
+var prev = document.querySelector(".arrow_left");
+var index = 0;
+var dots = document.getElementsByTagName("span");
+var container = document.querySelector(".container");
+
 
 /*********************************************end*************************************/
 
@@ -22,9 +28,7 @@
  */
 /********************************************begin************************************/
 
-     var wrap = document.querySelector(".wrap");
-     var next = document.querySelector(".arrow_right");
-     var prev = document.querySelector(".arrow_left");
+    
             next.onclick = function () {
                     next_pic();
             }
@@ -66,7 +70,6 @@
     }
 
 var index = 0;
-var dots = document.getElementsByTagName("span");
 function showCurrentDot () {
     for(var i = 0, len = dots.length; i < len; i++){
         dots[i].className = "";
@@ -100,7 +103,6 @@ function autoPlay () {
     },2000);
 }
 autoPlay();
-var container = document.querySelector(".container");
 container.onmouseenter = function () {
     clearInterval(timer);
 }
