@@ -73,7 +73,7 @@ mysqli函数，连接到MySQL服务器，获得数据库资源。
 
 ## exercise 8
 
-![](/Users/dinghao/Documents/GitHub/fdu-19ss-web-lab/lab10/screenshot/截屏2020-06-07 下午8.55.29.png)
+![](screenshot/截屏2020-06-07 下午8.55.29.png)
 
 和上一个练习一样，调用一次config.php
 
@@ -106,4 +106,4 @@ mysqli函数，连接到MySQL服务器，获得数据库资源。
 
 来不及了 
 
-![](/Users/dinghao/Documents/GitHub/fdu-19ss-web-lab/lab10/screenshot/截屏2020-06-07 下午9.32.20.png)
+![](screenshot/截屏2020-06-07 下午9.32.20.png)
